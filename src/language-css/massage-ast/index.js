@@ -95,6 +95,9 @@ function massageAstNode(original, cloned, parent) {
   ) {
     cloned.value = cloned.value.toLowerCase();
   }
+  if (original.isHex) {
+    cloned.value = cloned.value.toUpperCase();
+  }
   if (original.type === "css-decl") {
     cloned.prop = original.prop.toLowerCase();
   }

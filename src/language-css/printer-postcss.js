@@ -543,7 +543,7 @@ function genericPrint(path, options, print) {
 
     case "value-word":
       if ((node.isColor && node.isHex) || isWideKeywords(node.value)) {
-        return node.value.toLowerCase();
+        return node.value.toUpperCase();
       }
 
       return node.value;
